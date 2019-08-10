@@ -38,7 +38,8 @@
 
         <ProgressBar Name="progressBar" 
                      Height="30" MinHeight="30" 
-                     Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" />
+                     Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"
+                     Minimum="0" Maximum="70"/>
 
         <Label Name="inputLabel" 
                Grid.Column="1" Grid.Row="4" Margin="8, 25, 0, 8" 
@@ -52,7 +53,7 @@
         <Button Name="startTestBtn"
                 Width="290" MinWidth="290" Height="40" MinHeight="40"
                 Grid.Column="2" Grid.Row="5" Margin="15, 0, 0, 15" HorizontalAlignment="Right"
-                Content="Wysyłaj zapytania PING przez 7 sek."/>
+                Content="Wysyłaj zapytania PING przez 7 sek." Click="StartTestBtn_Click"/>
         
     </Grid>
 
