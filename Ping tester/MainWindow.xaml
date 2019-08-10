@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ping_tester"
         mc:Ignorable="d"
-        Title="Ping test" Height="600" MinHeight="600" Width="660" MinWidth="660">
+        Title="Ping test"
+        ResizeMode="NoResize"
+        Height="600" Width="660">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"></ColumnDefinition>
@@ -26,7 +28,7 @@
         </Grid.RowDefinitions>
 
         <ScrollViewer Name="scroll"
-                       Width="610" MinWidth="610" Height="320" MinHeight="320" 
+                       Width="610" Height="320" 
                       Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" >
             <TextBlock Name="testOutput" 
                        Foreground="LightGreen" FontFamily="Consolas" Padding="10" Background="Black" Text="Odpowiedzi PING:" />
@@ -37,7 +39,7 @@
                Content="Czas który upłynął od rozpoczęcia testu PING:"/>
 
         <ProgressBar Name="progressBar" 
-                     Height="30" MinHeight="30" 
+                     Height="30" 
                      Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"
                      Minimum="0" Maximum="70"/>
 
@@ -46,12 +48,12 @@
                Content="Adres do testowania PING:"/>
 
         <TextBox Name="adressInput" 
-                 Width="290" MinWidth="290" Height="40" MinHeight="40"
+                 Width="290" Height="40"
                  Grid.Column="1" Grid.Row="5" Margin="0, 0, 15, 15" HorizontalAlignment="Left" 
                  FontSize="22" FontWeight="Bold" Foreground="DimGray"  Text="google.com"/>
 
         <Button Name="startTestBtn"
-                Width="290" MinWidth="290" Height="40" MinHeight="40"
+                Width="290" Height="40"
                 Grid.Column="2" Grid.Row="5" Margin="15, 0, 0, 15" HorizontalAlignment="Right"
                 Content="Wysyłaj zapytania PING przez 7 sek." Click="StartTestBtn_Click"/>
         
