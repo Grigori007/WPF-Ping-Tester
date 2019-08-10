@@ -16,11 +16,13 @@ namespace Ping_tester
             TimeoutInMiliseconds = _TimeoutInMiliseconds;
         }
 
+        // Główna metoda przeprowadzająca jeden test PING
         public async Task<PingReply> ConductTest(string address)
         {
             return await pingTester.SendPingAsync(address, TimeoutInMiliseconds);
         }
 
+        // Metoda zwracająca stringa z wynikiem testu
         public string DisplayPingReply(PingReply pingReply)
         {
             if (pingReply != null)
@@ -31,6 +33,12 @@ namespace Ping_tester
             {
                 return "No reply. \n";
             }
+        }
+
+        // Metoda zwracająca stringa z informacją o zakończeniu testu
+        public string DisplayTestFinish()
+        {
+            return "Test zakończony. \n";
         }
     }
 }

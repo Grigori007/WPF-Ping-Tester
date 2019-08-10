@@ -43,7 +43,7 @@
 
         <Label Name="inputLabel" 
                Grid.Column="1" Grid.Row="4" Margin="8, 25, 0, 8" 
-               Content="Adres do testowania Ping:"/>
+               Content="Adres do testowania PING:"/>
 
         <TextBox Name="adressInput" 
                  Width="290" MinWidth="290" Height="40" MinHeight="40"
